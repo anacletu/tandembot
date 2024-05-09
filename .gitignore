@@ -1,0 +1,37 @@
+# Arquivos do sistema operacional (macOS)
+.DS_Store
+Thumbs.db
+
+# Arquivos de ambiente virtual
+my_env/
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+*.pyc
+
+# Arquivos de IDE
+.vscode/
+.idea/
+
+# Arquivo de variáveis de ambiente
+.env
+
+# Arquivos compilados/otimizados/DLL em bytes
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Extensões C
+*.so
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
