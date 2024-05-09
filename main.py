@@ -1,13 +1,11 @@
 import os
-import requests
-import json
 import speech_recognition as sr
 from gtts import gTTS
 from dotenv import load_dotenv
 import threading
 import sounddevice as sd
-import numpy as np
 import scipy.io.wavfile as wav
+import google.generativeai as genai
 
 # Carrega as variáveis de ambiente do arquivo .env
 load_dotenv()
@@ -17,6 +15,11 @@ API_KEY = os.getenv("API_KEY")
 API_URL = os.getenv("API_URL")
 fs = int(os.getenv("FS"))
 duration = int(os.getenv("DURATION"))
+
+# Cria uma instância do Gemini
+genai.configure(api_key=API_KEY)
+model = genai.GenerativeModel('gemini-pro')
+chat = model.start_chat(history=[])
 
 
 def main():
@@ -76,18 +79,10 @@ def speech_to_text(audio_file_path, language='en-US'):
 
 
 def get_chatbot_response(user_interaction="Hello"):
-    # Define o cabeçalho da solicitação
-    HEADERS = {"Content-Type": "application/json"}
-
-    # Define os dados da solicitação
-    DATA = {"contents": [{"parts": [{"text": user_interaction}]}]}
-
     # Faz uma solicitação para a API e retorna a resposta do chatbot.
-    response = requests.post(
-        f"{API_URL}?key={API_KEY}", headers=HEADERS, data=json.dumps(DATA)
-    )
-    response.raise_for_status()  # Lança uma exceção se a solicitação falhar
-    return response.json()["candidates"][0]["content"]["parts"][0]["text"]
+    response = chat.send_message(user_interaction)
+    return response.text
+    #to_markdown(response.text)
 
 
 def text_to_speech(text, lang='en'):
