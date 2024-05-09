@@ -28,10 +28,12 @@ __pycache__/
 # Extensões C
 *.so
 
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
-
-# C extensions
-*.so
+# Arquivos de áudio e vídeo
+*.mp3
+*.mp4
+*.avi
+*.wav
+*.mov
+*.wmv
+*.flv
+*.mkv
