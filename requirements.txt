@@ -1,4 +1,5 @@
 annotated-types==0.6.0
+black==24.4.2
 cachetools==5.3.3
 certifi==2024.2.2
 cffi==1.16.0
@@ -16,7 +17,11 @@ grpcio-status==1.62.2
 gTTS==2.5.1
 httplib2==0.22.0
 idna==3.7
+mypy-extensions==1.0.0
 numpy==1.26.4
+packaging==24.0
+pathspec==0.12.1
+platformdirs==4.2.1
 proto-plus==1.23.0
 protobuf==4.25.3
 pyasn1==0.6.0
