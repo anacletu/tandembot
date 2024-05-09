@@ -1,16 +1,46 @@
-# Projeto de Chatbot
+# Boas-vindas ao Tandembot!
 
-Este é um projeto em andamento de um chatbot que utiliza a API do Google Text-to-Speech para converter a resposta do chatbot em fala.
+Um chatbot de conversação por voz que utiliza reconhecimento de fala, síntese de fala e inteligência artificial via API do Google Gemini para interagir com os usuários.
 
-## Configuração
+- [Funcionalidades](#funcionalidades)
+- [Pré-requisitos](#pré-requisitos)
+- [Instalação](#instalação)
+- [Uso](#uso)
+- [Exemplo de uso](#exemplo-de-uso)
+- [Futuras melhorias](#futuras-melhorias)
+- [Agradecimentos](#agradecimentos)
+- [Contribuindo](#contribuindo)
+- [Licença](#licença)
 
-1. Clone o repositório: `git clone url_do_seu_repositório`
-2. Entre no diretório do projeto: `cd nome_do_diretório`
-3. Instale as dependências: `pip install -r requirements.txt`
-4. Crie um arquivo `.env` na raiz do projeto e adicione sua chave de API:
+## Funcionalidades
 
+- Gravação de áudio da entrada do usuário.
+- Reconhecimento de fala para converter a entrada do usuário em texto.
+- Interação com um modelo de inteligência artificial para gerar respostas.
+- Síntese de fala para transformar as respostas do chatbot em áudio.
+
+## Pré-requisitos
+
+- Python 3.x
+- Bibliotecas Python listadas em `requirements.txt`
+- Credenciais válidas para API do Gemini
+
+## Instalação
+
+1. Clone o repositório: 
+```bash
+git clone https://github.com/anacletu/virtual_tandem
+```
+2. Instale as dependências:
+```bash
+pip install -r requirements.txt
+```
+3. Crie um arquivo `.env` na raiz do projeto e adicione sua chave de API, endpoint e preferências de áudio:
 ```env
 API_KEY=sua_chave_api
+API_URL=https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent
+FS=44100
+DURATION=15
 ```
 
 ## Uso
@@ -20,11 +50,24 @@ Execute o script principal:
 python main.py
 ```
 
+Siga as instruções no terminal para interagir com o chatbot.
 O script irá fazer uma solicitação para a API, converter a resposta em fala e reproduzir o áudio.
 
+## Exemplo de uso
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+
+## Futuras Melhorias
+- Adição de suporte para mais idiomas.
+- Implementação de uma interface gráfica para facilitar a interação.
+- Melhoria da robustez do reconhecimento de fala e da síntese de fala.
+- Mair possibilidades de configuração, como nível do idioma e complexidade de resposta.
+
+## Agradecimentos
+Este projeto foi desenvolvido como parte da Imersão de Inteligência Artificial promovida pela Alura e Google. Agradeço às instituições por proporcionarem uma experiência educacional valiosa e prática.
+
 ## Contribuições
-Este projeto está em andamento e todas as contribuições são bem-vindas. Sinta-se à vontade para abrir uma issue ou fazer um pull request.
+Contribuições são bem-vindas! Para sugestões, correções de bugs e outras alterações, sinta-se à vontade para abrir uma issue ou enviar um pull request.
 
 ## Licença
-Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+Este projeto está sob a licença MIT. Veja o arquivo de [licença](LICENSE) para mais detalhes.
 
