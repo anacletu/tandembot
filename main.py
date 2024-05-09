@@ -49,7 +49,7 @@ def main():
 
 
 def app_start():
-    '''Exibe a mensagem de boas-vindas e solicita ao usuário que escolha um idioma para conversar.'''
+    """Exibe a mensagem de boas-vindas e solicita ao usuário que escolha um idioma para conversar."""
 
     print("\n*** Bem-vindo ao tandembot! ***\n")
     print("Escolha um idioma para conversar e pratique suas habilidades: ")
@@ -59,16 +59,18 @@ def app_start():
 
     language = {"1": "pt-BR", "2": "en-US", "3": "es-ES"}
     chosen_lang = "0"
-    
+
     while chosen_lang not in ["1", "2", "3", "sair", "quit", "exit"]:
-        chosen_lang = input("Digite o número correspondente ao idioma que quer praticar ou 'sair': \n")
+        chosen_lang = input(
+            "Digite o número correspondente ao idioma que quer praticar ou 'sair': \n"
+        )
         chat_lang = language.get(chosen_lang)
 
     return chat_lang
 
 
 def close_app():
-    '''Encerra a aplicação.'''
+    """Encerra a aplicação."""
     print("\nVolte logo para praticar mais!")
     exit()
 
@@ -82,7 +84,7 @@ def print_chat_history():
 
 
 def process_voice():
-    '''Gerencia a thread de gravação de voz retorna o caminho para o arquivo wav.'''
+    """Gerencia a thread de gravação de voz retorna o caminho para o arquivo wav."""
     # Inicia a gravação de áudio em uma thread separada
     thread = threading.Thread(target=record_audio)
     thread.start()
@@ -120,7 +122,7 @@ def speech_to_text(audio_file_path, language="en-US"):
 
 
 def get_chatbot_response(user_interaction="Hello"):
-    '''Obtém a resposta do chatbot para a interação do usuário.'''
+    """Obtém a resposta do chatbot para a interação do usuário."""
     # Faz uma solicitação para a API e retorna a resposta do chatbot.
     response = chat.send_message(user_interaction, stream=True)
     response.resolve()
@@ -139,16 +141,16 @@ def play_and_remove_audio():
         os.system("start response.mp3")
     elif platform.system == "Linux":
         os.system("mpg123 response.mp3")
-    else: # MacOS
+    else:  # MacOS
         os.system("afplay response.mp3")
-    
+
     os.remove("response.mp3")
     os.remove("prompt.wav")
 
 
 def clear_terminal():
     """Limpa o terminal."""
-    os.system('cls' if os.name == 'nt' else 'clear')
+    os.system("cls" if os.name == "nt" else "clear")
 
 
 if __name__ == "__main__":
