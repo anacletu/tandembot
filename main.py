@@ -1,12 +1,13 @@
 import os
-import speech_recognition as sr
-from gtts import gTTS
-from dotenv import load_dotenv
-import threading
-import sounddevice as sd
-import scipy.io.wavfile as wav
-import google.generativeai as genai
 import platform
+import threading
+
+import google.generativeai as genai
+import scipy.io.wavfile as wav
+import sounddevice as sd
+from dotenv import load_dotenv
+from gtts import gTTS
+import speech_recognition as sr
 
 # Carrega as variáveis de ambiente do arquivo .env
 load_dotenv()
