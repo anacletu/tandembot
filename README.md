@@ -54,7 +54,7 @@ Siga as instruções no terminal para interagir com o chatbot.
 O script irá fazer uma solicitação para a API, converter a resposta em fala e reproduzir o áudio.
 
 ## Exemplo de uso
-<iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://youtu.be/8vUDbbJG6x4" frameborder="0" allowfullscreen></iframe>
 
 ## Futuras Melhorias
 - Adição de suporte para mais idiomas.
