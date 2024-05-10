@@ -54,7 +54,11 @@ Siga as instruções no terminal para interagir com o chatbot.
 O script irá fazer uma solicitação para a API, converter a resposta em fala e reproduzir o áudio.
 
 ## Exemplo de uso
-![Video Title](https://www.youtube.com/embed/8vUDbbJG6x4)
+Veja um rápido vídeo demonstrando conversas simples em português, inglês e espanhol.
+
+https://github.com/anacletu/tandembot/assets/56979763/33817e23-0f4b-4245-aa1b-306f7661abfa
+
+
 
 ## Futuras Melhorias
 - Adição de suporte para mais idiomas.
