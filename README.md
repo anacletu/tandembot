@@ -1,77 +1,71 @@
-# Boas-vindas ao Tandembot!
+# Welcome to Tandembot!
 
-Um chatbot de conversação por voz que utiliza reconhecimento de fala, síntese de fala e inteligência artificial via API do Google Gemini para interagir com os usuários.
+A voice chatbot utilizing speech recognition, speech synthesis, and artificial intelligence through the Google Gemini API to interact with users.
 
-- [Funcionalidades](#funcionalidades)
-- [Pré-requisitos](#pré-requisitos)
-- [Instalação](#instalação)
-- [Uso](#uso)
-- [Exemplo de uso](#exemplo-de-uso)
-- [Futuras melhorias](#futuras-melhorias)
-- [Agradecimentos](#agradecimentos)
-- [Contribuindo](#contribuindo)
-- [Licença](#licença)
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Example Usage](#example-usage)
+- [Future Improvements](#future-improvements)
+- [Acknowledgements](#acknowledgements)
+- [Contributing](#contributing)
+- [License](#license)
 
-## Funcionalidades
+## Features
 
-- Gravação de áudio da entrada do usuário.
-- Reconhecimento de fala para converter a entrada do usuário em texto.
-- Interação com um modelo de inteligência artificial para gerar respostas.
-- Síntese de fala para transformar as respostas do chatbot em áudio.
+- Recording of user input audio.
+- Speech recognition to convert user input into text.
+- Interaction with an artificial intelligence model to generate responses.
+- Speech synthesis to transform chatbot responses into audio.
 
-## Pré-requisitos
+## Prerequisites
 
 - Python 3.x
-- Bibliotecas Python listadas em `requirements.txt`
-- Credenciais válidas para API do Gemini
+- Python libraries listed in `requirements.txt`
+- Valid credentials for the Gemini API
 
-## Instalação
+## Installation
 
-1. Clone o repositório: 
+1. Clone the repository:
 ```bash
 git clone https://github.com/anacletu/virtual_tandem
 ```
-2. Instale as dependências:
+2. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
-3. Crie um arquivo `.env` na raiz do projeto e adicione sua chave de API, endpoint e preferências de áudio:
+3. Create a `.env` file in the project root and add your API key, endpoint, and audio preferences:
 ```env
-API_KEY=sua_chave_api
+API_KEY=your_api_key
 API_URL=https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent
 FS=44100
 DURATION=15
 ```
 
-## Uso
-Execute o script principal:
+## Usage
+Run the main script:
 
-```
+``` bash
 python main.py
 ```
 
-Siga as instruções no terminal para interagir com o chatbot.
-O script irá fazer uma solicitação para a API, converter a resposta em fala e reproduzir o áudio.
+Follow the instructions in the terminal to interact with the chatbot.
+The script will make a request to the API, convert the response into speech, and play the audio.
 
-## Exemplo de uso
-Veja um rápido vídeo demonstrando conversas simples em português, inglês e espanhol.
+## Example Usage
+See a quick video demonstrating simple conversations in Portuguese, English, and Spanish.
 
 https://github.com/anacletu/tandembot/assets/56979763/33817e23-0f4b-4245-aa1b-306f7661abfa
 
+## Future Improvements
+- Addition of support for more languages.
+- Implementation of a graphical interface to facilitate interaction.
+- Improvement of speech recognition and speech synthesis robustness.
+- More configuration possibilities, such as language level and response complexity.
 
+## Contributing
+Contributions are welcome! For suggestions, bug fixes, and other changes, feel free to open an issue or submit a pull request.
 
-## Futuras Melhorias
-- Adição de suporte para mais idiomas.
-- Implementação de uma interface gráfica para facilitar a interação.
-- Melhoria da robustez do reconhecimento de fala e da síntese de fala.
-- Mair possibilidades de configuração, como nível do idioma e complexidade de resposta.
-
-## Agradecimentos
-Este projeto foi desenvolvido como parte da Imersão de Inteligência Artificial promovida pela Alura e Google. Agradeço às instituições por proporcionarem uma experiência educacional valiosa e prática.
-
-## Contribuições
-Contribuições são bem-vindas! Para sugestões, correções de bugs e outras alterações, sinta-se à vontade para abrir uma issue ou enviar um pull request.
-
-## Licença
-Este projeto está sob a licença MIT. Veja o arquivo de [licença](LICENSE) para mais detalhes.
-
+## License
+This project is licensed under the MIT License. See the [license](LICENSE) file for more details.
