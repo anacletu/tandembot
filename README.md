@@ -8,7 +8,6 @@ A voice chatbot utilizing speech recognition, speech synthesis, and artificial i
 - [Usage](#usage)
 - [Example Usage](#example-usage)
 - [Future Improvements](#future-improvements)
-- [Acknowledgements](#acknowledgements)
 - [Contributing](#contributing)
 - [License](#license)
 
